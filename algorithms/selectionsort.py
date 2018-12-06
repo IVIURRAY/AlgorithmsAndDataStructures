@@ -1,12 +1,14 @@
 """
-Bubble sort - A naive sorting algorithm
+Selection sort - A naive sorting algorithm
 
-Iterate through [, , , -->, , , ] and find the lowest value and move to end.
+Iterate from left to right [, , , -->, , , ]
+Find the lowest number in array and more it to the beginning of the array.
+Start again but starting from n+1 in the index as you've already sorted this part.
 
 Time Complexity: O(n)^2 as for each pass you iterate over every element.
 Space Complexity: O(1) as you change vales in place you don't create any new memory.
 
-Good uses: Inserting one item into an already sorted list then only one iteration needed to sort the array.
+Good uses: ??
 Bad uses: Almost everything as its O(n)^2.
 """
 # TODO: Add a condition to break out of the sort when minimum_index  == 0 (nothing to swap).
