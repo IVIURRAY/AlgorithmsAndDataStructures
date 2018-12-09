@@ -23,7 +23,7 @@ from utils.timer import Timer
 def binary_search(array, target):
     i = len(array) // 2
     mid = array[i]
-
+    print(len(array))
     if i == 1 and mid != target:
         print('Did not find %s in array.' % target)
         return False
