@@ -45,4 +45,6 @@ if __name__ == '__main__':
     with Timer():
         print(binary_search([i for i in range(1000)], 250))
     with Timer():
+        print(binary_search([i for i in range(1000)], -2))
+    with Timer():
         print(binary_search([i for i in range(1000000)], 500))
