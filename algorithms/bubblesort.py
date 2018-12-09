@@ -12,21 +12,28 @@ Bad uses: Almost everything as its O(n)^2.
 """
 # TODO - Add condition to break out when complete iteration without a swap
 
-def swap(arr, i, j):
-    x = arr[i]
-    arr[i] = arr[j]
-    arr[j] = x
-    return arr
+from utils.timer import Timer
+from utils.arrays import swap
 
 
-numbers = [5, 9, 3, 1, 2, 8, 4, 7, 6]
+def bubbleSort(numbers, debug=False):
+    for x in range(len(numbers)):
+        for i in range(len(numbers[:-x])):
+            if i+1 < len(numbers):
+                if numbers[i] > numbers[i+1]:
+                    numbers = swap(numbers, i, i+1)
 
-for x in range(len(numbers)):
-    for i in range(len(numbers[:-x])):
-        if i+1 < len(numbers):
-            if numbers[i] > numbers[i+1]:
-                numbers = swap(numbers, i, i+1)
-            print('Pass: %s Iteration %s' % (x, i), numbers)
+                if debug:
+                    print('Pass: %s Iteration %s' % (x, i), numbers)
 
+
+if __name__ == '__main__':
+    import random
+    with Timer():
+        bubbleSort([5, 9, 3, 1, 2, 8, 4, 7, 6], debug=True)
+    with Timer():
+        bubbleSort([random.randint(1, 10) for _ in range(100)])
+    with Timer():
+        bubbleSort([random.randint(1, 10) for _ in range(10000)])
 
 print('done')
