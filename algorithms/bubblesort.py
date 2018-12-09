@@ -26,6 +26,7 @@ def bubbleSort(numbers, debug=False):
                 if debug:
                     print('Pass: %s Iteration %s' % (x, i), numbers)
 
+    return numbers
 
 if __name__ == '__main__':
     import random
