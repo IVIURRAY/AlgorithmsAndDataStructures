@@ -14,7 +14,7 @@ from utils.arrays import swap
 from utils.timer import Timer
 
 
-def insertionSort(numbers, debug=False):
+def insertion_sort(numbers, debug=False):
 
     for i in range(1, len(numbers)):
 
@@ -35,8 +35,8 @@ def insertionSort(numbers, debug=False):
 if __name__ == '__main__':
     import random
     with Timer():
-        insertionSort([5, 9, 3, 1, 2, 8, 4, 7, 6], debug=True)
+        insertion_sort([5, 9, 3, 1, 2, 8, 4, 7, 6], debug=True)
     with Timer():
-        insertionSort([random.randint(1, 10) for _ in range(100)])
+        insertion_sort([random.randint(1, 10) for _ in range(100)])
     with Timer():
-        insertionSort([random.randint(1, 10) for _ in range(10000)])
+        insertion_sort([random.randint(1, 10) for _ in range(10000)])
