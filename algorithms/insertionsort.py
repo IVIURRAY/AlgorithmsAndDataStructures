@@ -2,7 +2,7 @@
 Insertion Sort - A sorting algorithm
 
 Consider the left most array index sorted.
-Take the next item in the array and compare it to the sorted array.
+Take the next item in the array and compare it to the sorted array going from n, n-1, n-2...0.
 
 Time complexity: O(n)^2 as each item is compared against each other. Wost case in array is in reverse order.
 Space complexity: O(n) as can be done in place.

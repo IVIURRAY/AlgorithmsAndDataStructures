@@ -22,7 +22,7 @@ def selectionSort(numbers, debug=False):
     for pointer in range(len(numbers)):
         minimum = 99*99                                         # just some huge number to be less than
         for i, num in enumerate(numbers[pointer:]):             # everything from pointer+ is already sorted
-            if num < minimum:                                   # find the min of the sub arry
+            if num < minimum:                                   # find the min of the sub array
                 if debug: print('%s is less than %s' % (num, minimum))
                 minimum = num                                   # store min and its index to use for swapping
                 minimum_index = i
