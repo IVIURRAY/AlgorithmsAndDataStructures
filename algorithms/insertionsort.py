@@ -4,11 +4,11 @@ Insertion Sort - A sorting algorithm
 Consider the left most array index sorted.
 Take the next item in the array and compare it to the sorted array.
 
-Time complexity: O(n)^2 as each item is compared against each other
-Space complexity:
+Time complexity: O(n)^2 as each item is compared against each other. Wost case in array is in reverse order.
+Space complexity: O(n) as can be done in place.
 
-Good uses:
-Bad uses:
+Good uses: Slightly more optimal than selection and bubble.
+Bad uses: In siutaions when the array is in decending order.
 """
 from utils.arrays import swap
 from utils.timer import Timer
