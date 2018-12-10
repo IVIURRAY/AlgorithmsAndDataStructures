@@ -17,8 +17,8 @@ Space complexity: O(log(n)) as we make a new array and the recursion of the func
 Good cases: Does not scale exponentially, but array needs to be sorted first.
 Bas cases: When array is unsorted and the three is left/right skewed.
 """
-from utils.timer import Timer
 
+from utils.timer import Timer
 
 def binary_search(array, target):
     i = len(array) // 2

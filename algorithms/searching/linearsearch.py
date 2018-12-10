@@ -15,7 +15,12 @@ from utils.timer import Timer
 
 
 def linear_search(array, target):
-    return any([i == target for i in array])
+    # return any([i == target for i in array])
+    for i in array:
+        if i == target:
+            return True
+
+    return False
 
 
 if __name__ == '__main__':
